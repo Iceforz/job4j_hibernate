@@ -24,10 +24,15 @@ public class HbmRun {
                 System.out.println(candidate);
             }
 
-            System.out.println(session.createQuery("from Candidate s where s.id = 3").uniqueResult());
-            System.out.println(session.createQuery("from Candidate s where s.name = 'Ivan'").getResultList());
+            System.out.println(session.createQuery(
+                    "from Candidate s where s.id = 3").uniqueResult());
+            System.out.println(session.createQuery(
+                    "from Candidate s where s.name = 'Ivan'").getResultList());
 
-            session.createQuery("update Candidate  s set s.experience = :experience, s.salary = :salary where s.id = :Id")
+            session.createQuery(
+                    "update Candidate  s set s.experience = :experience,"
+                            +
+                            " s.salary = :salary where s.id = :Id")
                     .setParameter("experience", "middle")
                     .setParameter("salary", 20000)
                     .setParameter("Id", 3)
