@@ -1,6 +1,7 @@
 package ru.job4j.hql;
 
 import javax.persistence.*;
+
 import java.util.Objects;
 
 @Entity
